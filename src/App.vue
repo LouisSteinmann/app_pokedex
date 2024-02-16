@@ -11,7 +11,15 @@
         </div>
     </main>
   </div>
+  <Teleport to="body">
+  <div v-if="selectedPokemon == null" class="popUp">
+  </div>
+</Teleport>
+
+<!-- <div class="popUp"></div> -->
+
 </template>
+
 
 <script>
 import PokeList from './components/PokeList.vue'
@@ -44,4 +52,13 @@ background-image: url('./assets/bg.png');
 .logo img{
   width: 100%;
 }
+
+.popUp{
+      position: fixed;
+      
+      width: 80%;
+      height: 80%;
+      background-color: aqua;
+      z-index:999;
+    }
 </style>

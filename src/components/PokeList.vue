@@ -1,8 +1,8 @@
 <template>
-    <div>
-      <PokeCard @click="mamethode" v-for="pokemon of pokemons" :key="pokemon" v-bind:pokemon="pokemon">
+    <div >
+      <PokeCard v-for="pokemon of pokemons" :key="pokemon" v-bind:pokemon="pokemon" @click="selectedPokemon = pokemon">
       </PokeCard>
-      <PokeModal v-if="selectedPokemon"></PokeModal> 
+      <!-- PokeModal v-if="selectedPokemon"></PokeModal --> 
     </div>
   </template>
   <script>
@@ -17,7 +17,8 @@
     data() {
       return {
           pokemons: json_pokemons,
-          selectedPokemon: null
+          selectedPokemon: json_pokemons[0],
+          open :false,
       }
     },
     methods: {
@@ -30,3 +31,6 @@
     }
   }
   </script>
+  <style scoped>
+
+  </style>

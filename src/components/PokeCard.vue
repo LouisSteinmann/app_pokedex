@@ -9,7 +9,7 @@
     <div class="card">
         <div>
             <div class="image">
-                <img :src="imageUrl" :alt="name" />
+                <img :src="imageUrl" :alt="pokemon.name" />
             </div>
             <div class="name">
                 <p><span class = "tag">#{{ pokemon.pokedex_number }}</span>{{pokemon.name}}</p>
@@ -29,9 +29,13 @@
 
 
 
+
+
+
 </template>
 <script>
 export default {
+    emits: ['click'],
     props: {
         pokemon: {
             type: Object,
@@ -109,6 +113,6 @@ export default {
 .card div.image{
     display: block;
     height: 100%; 
-    
 }
+
 </style>
