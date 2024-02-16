@@ -40,7 +40,7 @@ export default {
     },
     computed :{
         imageUrl(){
-        return "/images/"+ this.pokemon.name + ".png";
+        return "/images/"+ this.pokemon.name.toLowerCase() + ".png";
     },
     }
     
@@ -96,7 +96,7 @@ export default {
     text-align: left;
     
 }
-.card div:nth-child(1){
+.card > div:nth-child(1){
     display: flex;
     align-items: center;
     width: 10%;
@@ -106,10 +106,9 @@ export default {
     border-radius: 15px;
     height: 90px;
 }
-/* .card div.image{
+.card div.image{
     display: block;
-    width: 80px ;
-    height: auto; 
+    height: 100%; 
     
-} */
+}
 </style>

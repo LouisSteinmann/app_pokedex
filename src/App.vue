@@ -1,10 +1,14 @@
 <template>
-  <div>
+  <div class = 'background'>
     <header>
-      <img src="./assets/logo.png" alt="">
+        <div class = 'logo'>
+          <img src="./assets/logo.png" alt="">
+        </div>
     </header>
     <main>
+        <div>
       <PokeList />
+        </div>
     </main>
   </div>
 </template>
@@ -21,8 +25,23 @@ export default {
 </script>
 
 <style scoped>
+
 header {
   display: flex;
   justify-content: space-around;
+}
+.background{
+background-image: url('./assets/bg.png');
+}
+
+.logo{
+    display: block;
+    width: 40vw; 
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.logo img{
+  width: 100%;
 }
 </style>
